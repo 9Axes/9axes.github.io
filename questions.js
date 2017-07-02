@@ -51,7 +51,7 @@ questions =
         ],
         [//-2
              "A hierarchical state is best.",
-             "It is important that we further my group's goals above all others."
+             "It is important that we further my group's goals above all others.",
              "Democracy makes it too easy for a majority too further itself at the expense of minorities"
         ],
         [//-3
