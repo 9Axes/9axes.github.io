@@ -198,7 +198,7 @@ questions =
         ],
         [//-2
             "I believe in a higher power",
-            "Religious orginizations often provide better assistance to the poor than the government",
+            "Religious orginizations often provide better assistance to the poor than the government does",
             "Children should be educated in religious values."
         ],
         [//-3
