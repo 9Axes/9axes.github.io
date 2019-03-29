@@ -178,7 +178,8 @@ questions =
         ],
         [//1
             "The government should have access to the emails of suspected terrorists",
-            "Some freedom must be given up in order to keep people safe"
+            "Some freedom must be given up in order to keep people safe",
+            "Absolute freedom makes a society dangerous"
         ],
         [//-1
             "Marijuana should be legalized",
