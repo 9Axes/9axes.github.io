@@ -254,7 +254,7 @@ questions =
         [//2
             "I support gay marriage",
             "Every religion must be looked upon equally by the government",
-            "Religion should be removed from everthing in our government"
+            "Religion should be removed from everything in our government"
         ],
         [//1
             "Religion does not belong in government",
