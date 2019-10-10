@@ -263,7 +263,7 @@ questions =
         ],
         [//-1
             "I believe there is something after death",
-            "Religion is benefitial for society",
+            "Religion is beneficial for society",
             "People must be allowed to follow a religion"
         ],
         [//-2
@@ -292,7 +292,7 @@ questions =
             "When people have already suffered for technology to be developed, we should use that technology"
         ],
         [//2
-            "We should put effort into getting a person on mars in the near future",
+            "We should put effort into getting a person on Mars in the near future",
             "Testing products on animals is ethical",
             "Technological progress is usually good"
             
