@@ -254,7 +254,7 @@ questions =
         [//2
             "I support gay marriage",
             "Every religion must be looked upon equally by the government",
-            "Religion should be removed from everthing in our government"
+            "Religion should be removed from everything in our government"
         ],
         [//1
             "Religion does not belong in government",
@@ -263,12 +263,12 @@ questions =
         ],
         [//-1
             "I believe there is something after death",
-            "Religion is benefitial for society",
+            "Religion is beneficial for society",
             "People must be allowed to follow a religion"
         ],
         [//-2
             "I believe in a higher power",
-            "Religious orginizations often provide better assistance to the poor than the government does",
+            "Religious organizations often provide better assistance to the poor than the government does",
             "Children should be educated in religious values."
         ],
         [//-3
@@ -292,7 +292,7 @@ questions =
             "When people have already suffered for technology to be developed, we should use that technology"
         ],
         [//2
-            "We should put effort into getting a person on mars in the near future",
+            "We should put effort into getting a person on Mars in the near future",
             "Testing products on animals is ethical",
             "Technological progress is usually good"
             
