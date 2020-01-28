@@ -78,7 +78,7 @@ questions =
         ],
         [//-4
             "Elections are a waste of resources",
-            "Catering to popular opinion is detremental to a nation",
+            "Catering to popular opinion is detrimental to a nation",
             "A nation must obey its leadership without question"
         ]],[//Globalist-Isolationist
         [//4
