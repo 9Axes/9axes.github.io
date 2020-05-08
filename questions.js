@@ -335,7 +335,7 @@ questions =
         [//2
             "In general, immigrants are bad for the country",
             "A nation's culture is important to protect",
-            "Illegal Immigrants have no benefits"
+            "Illegal immigrants do not provide a benefit to the hosting country"
         ],
         [//1
             "Illegal immigrants should be deported in most or all cases",
