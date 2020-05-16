@@ -19,8 +19,8 @@
 <button class="button" onclick="next_question( 0)" style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
 <button class="button" onclick="next_question(-1)" style="background-color: #f44336;">Disagree</button> <br>
 <button class="button" onclick="next_question(-2)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
-<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
-<button class="small_button_off" id="back_button_off">Back</button><br>
+<button class="small_button" onclick="prev_question()" id="back_button">Previous</button>
+<button class="small_button_off" id="back_button_off">Previous</button><br>
 
 
 <script>
@@ -30,7 +30,7 @@
     var quests = [];
     init_all_questions(quests);
     init_question(quests);
-    
+
     function init_all_questions(qs) {
         //1,2,3,-2,-4
         var t = [1,2,3,5,7];
@@ -45,7 +45,7 @@
         }
         shuffle(qs);
     }
-    
+
     function init_question() {
         var ax = quests[qn][0];
         var rate = quests[qn][1];
@@ -86,7 +86,7 @@
         var rate = quests[qn][1];
         var num = quests[qn][2];
         scores[ax] += mult*(rate<4?1:-1);
-        
+
         answers[qn] = mult;
         qn++;
         if (qn < quests.length) {
