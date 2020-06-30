@@ -1,0 +1,125 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='/style.css' rel='stylesheet' type='text/css'>
+<title>Викторина 9Axes</title>
+<link rel="icon" type="x-icon" href="/icon.png">
+<link rel="shortcut icon" type="x-icon" href="/icon.png">
+<meta charset="utf-8">
+</head>
+<body>
+<script type="application/javascript"
+        src="questions.js">
+</script>
+<h1>9Axes</h1>
+<hr>
+<h2 style="text-align:center;" id="question-number">Загрузка...</h2>
+<p class="question" id="question-text"></p>
+<button class="button" onclick="next_question( 2)" style="background-color: #1b5e20;">Полностью согласен</button> <br>
+<button class="button" onclick="next_question( 1)" style="background-color: #4caf50;">Скорее согласен</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #bbbbbb;">Нейтрально/Не уверен</button> <br>
+<button class="button" onclick="next_question(-1)" style="background-color: #f44336;">Скорее не согласен</button> <br>
+<button class="button" onclick="next_question(-2)" style="background-color: #b71c1c;">Полностью не согласен</button> <br>
+<button class="small_button" onclick="prev_question()" id="back_button">Предыдущий</button>
+<button class="small_button_off" id="back_button_off">Предыдущий</button><br>
+
+
+<script>
+    var scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];//fed, dem, glo, mil, fre, equ, sec, pro, mul - User's scores
+    var qn = 0; // Question number
+    var answers = [];
+    var quests = [];
+    init_all_questions(quests);
+    init_question(quests);
+
+    function init_all_questions(qs) {
+        //1,2,3,-2,-4
+        var t = [1,2,3,5,7];
+        for(var i = 0; i < 9; i++) //Number of Axes
+        {
+            var c = Math.random()<0.5;
+            for(var j = 0; j < 5; j++) //Number of questions per axis
+            {
+                var m = [i,c?t[j]:(8-t[j]),Math.floor(Math.random()*questions[i][c?t[j]:(8-t[j])].length)];
+                qs.push(m);
+            }
+        }
+        shuffle(qs);
+    }
+
+    function init_question() {
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        document.getElementById("question-text").innerHTML = questions[ax][rate][num];
+        document.getElementById("question-number").innerHTML = "Вопрос " + (qn + 1) + " из " + (quests.length);
+        if (qn == 0) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
+        } else {
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
+        }
+
+    }
+
+    function shuffle(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+    function next_question(mult) {
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        scores[ax] += mult*(rate<4?1:-1);
+
+        answers[qn] = mult;
+        qn++;
+        if (qn < quests.length) {
+            init_question();
+        } else {
+            results();
+        }
+    }
+    function prev_question() {
+        if (qn == 0) {
+            return;
+        }
+        qn--;
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        scores[ax] -= answers[qn]*(rate<4?1:-1);
+        init_question();
+    }
+    function calc_score(score) {
+        return (50+5*score);
+    }
+    function results() {
+        location.href = `results.html`
+            + `?a=${calc_score(scores[0])}`
+            + `&b=${calc_score(scores[1])}`
+            + `&c=${calc_score(scores[2])}`
+            + `&d=${calc_score(scores[3])}`
+            + `&e=${calc_score(scores[4])}`
+            + `&f=${calc_score(scores[5])}`
+            + `&g=${calc_score(scores[6])}`
+            + `&h=${calc_score(scores[7])}`
+            + `&i=${calc_score(scores[8])}`;
+    }
+</script>
+</body>
