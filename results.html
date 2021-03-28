@@ -83,7 +83,7 @@
 
 <h2 class="ideology">Closest Match: <span class="weight-300" id="ideology-label"></span></h1>
 <p class="ideology">Your 8values ideology (see https://8values.github.io for more information)</p>
-<p class="ideology">Please note this does only factor the Economic, Diplomatic, Civil, and Societal axis.</p>
+<p class="ideology">Please note this does only factor the Democratic-Authoritarian, Globalist-Isolationist, Equality-Markets, and Progressive-Traditional axes.</p>
 
 <br><br>
 
@@ -115,7 +115,7 @@
     rightArray = ["Unitary","Authoritarian","Isolationist","Pacifist","Freedom","Markets","Religious","Traditional","Multiculturalist"]
 
     function setLabel(val,axis) {
-        if (val >= 90) { return "Fanatic " + leftArray[axis] } else
+        if (val >= 90) { return "Fanatic " +    [axis] } else
         if (val >= 80) { return "Extreme " + leftArray[axis] } else
         if (val >= 70) { return leftArray[axis] } else
         if (val >= 60) { return "Moderate " + leftArray[axis] } else
