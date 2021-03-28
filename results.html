@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 </head>
-<script type="application/javascript">
+<script type="application/javascript" src="ideologies.js">
 </script>
 
 <body>
@@ -78,7 +78,15 @@
     <div class="bar multiculture" id="bar-multiculture"><div class="text-wrapper" id="multiculture"></div></div>
     <img id="img-multiculture" src="value_images/multiculturalist.png" height="128pt"/>
 </div>
-<hr/>
+
+<br><br>
+
+<h2 class="ideology">Closest Match: <span class="weight-300" id="ideology-label"></span></h1>
+<p class="ideology">Your 8values ideology (see https://8values.github.io for more information)</p>
+<p class="ideology">Please note this does only factor the Economic, Diplomatic, Civil, and Societal axis.</p>
+
+<br><br>
+
 <canvas id="banner" width=800 height=1200 style="font-family:Montserrat"></canvas>
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
 <script>
@@ -166,6 +174,22 @@
     document.getElementById("g-label").innerHTML = setLabel(g, 6)
     document.getElementById("h-label").innerHTML = setLabel(h, 7)
     document.getElementById("i-label").innerHTML = setLabel(i, 8)
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - f), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.govt - b), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - c), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.scty - h), 1.73856063)
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    
+    document.getElementById("ideology-label").innerHTML = ideology
 
     function createImage(src, x, y, w, h) {
         img = new Image ()

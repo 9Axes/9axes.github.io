@@ -57,6 +57,9 @@ h1 {
     margin-top: 0pt;
     margin-bottom: 0pt;
 }
+.ideology {
+    text-align: center;
+}
 h2 {
     color: #333333;
     font-family: 'Montserrat', sans-serif;
