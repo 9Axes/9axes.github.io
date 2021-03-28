@@ -115,7 +115,7 @@
     rightArray = ["Unitary","Authoritarian","Isolationist","Pacifist","Freedom","Markets","Religious","Traditional","Multiculturalist"]
 
     function setLabel(val,axis) {
-        if (val >= 90) { return "Fanatic " +    [axis] } else
+        if (val >= 90) { return "Fanatic " + leftArray[axis] } else
         if (val >= 80) { return "Extreme " + leftArray[axis] } else
         if (val >= 70) { return leftArray[axis] } else
         if (val >= 60) { return "Moderate " + leftArray[axis] } else
