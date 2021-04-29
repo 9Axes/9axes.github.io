@@ -134,7 +134,7 @@
     f  = getQueryVariable("f")
     g  = getQueryVariable("g")
     h  = getQueryVariable("h")
-    i  = getQueryVariable("i")
+    i1  = getQueryVariable("i")
     a2 = 100-a;
     b2 = 100-b;
     c2 = 100-c;
@@ -143,7 +143,7 @@
     f2 = 100-f;
     g2 = 100-g;
     h2 = 100-h;
-    i2 = 100-i;
+    i2 = 100-i1;
 
     setBarValue("federal", a)
     setBarValue("unitary", a2)
@@ -161,7 +161,7 @@
     setBarValue("religious", g2)
     setBarValue("progress", h)
     setBarValue("tradition", h2)
-    setBarValue("assimilation", i)
+    setBarValue("assimilation", i1)
     setBarValue("multiculture", i2)
     
 
@@ -173,7 +173,7 @@
     document.getElementById("f-label").innerHTML = setLabel(f, 5)
     document.getElementById("g-label").innerHTML = setLabel(g, 6)
     document.getElementById("h-label").innerHTML = setLabel(h, 7)
-    document.getElementById("i-label").innerHTML = setLabel(i, 8)
+    document.getElementById("i-label").innerHTML = setLabel(i1, 8)
 
     ideology = ""
     ideodist = Infinity
@@ -285,7 +285,7 @@
         ctx.fillStyle="#8bc34a"
         ctx.fillRect(682-5.6*h2, 974, 5.6*h2-2, 72)
         ctx.fillStyle="#ea90ab"
-        ctx.fillRect(120, 1094, 5.6*i-2, 72)
+        ctx.fillRect(120, 1094, 5.6*i1-2, 72)
         ctx.fillStyle="#3f51b5" 
         ctx.fillRect(682-5.6*i2, 1094, 5.6*i2-2, 72)
         ctx.fillStyle="#222222"
@@ -305,7 +305,7 @@
         if (f > 20) {ctx.fillText(f + "%", 130, 787.5)}
         if (g  > 20) {ctx.fillText(g + "%", 130, 907.5)}
         if (h > 20) {ctx.fillText(h + "%", 130, 1027.5)}
-        if (i  > 20) {ctx.fillText(i + "%", 130, 1147.5)}
+        if (i1  > 20) {ctx.fillText(i1 + "%", 130, 1147.5)}
         ctx.textAlign="right"
         if (a2    > 20) {ctx.fillText(a2 + "%", 670, 187.5)}
         if (b2     > 20) {ctx.fillText(b2 + "%", 670, 307.5)}
