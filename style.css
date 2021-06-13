@@ -13,7 +13,7 @@ body {
     border-right-style: solid;
     border-width: 20px;
 }
-p {
+p, li {
     color: #444444;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
